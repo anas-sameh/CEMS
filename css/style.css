@@ -26,7 +26,6 @@ html {
 nav {
     font-weight: 600;
     background: linear-gradient(90deg, var(--main_color) 60%, var(--second_color) 100%);
-    border-bottom: 1px solid #e0e0e0;
     padding: 12px 32px;
     display: flex;
     align-items: center;
@@ -38,6 +37,9 @@ nav {
 }
 nav a {
     text-decoration: none;
+}
+nav .dropdown_items ul a {
+    color: var(--main_color);
 }
 
 .logo {
@@ -110,16 +112,13 @@ nav a {
 .section-wrapper {
     display: flex;
     width: 100%;
-    min-height: 70vh;
+    min-height: 92vh;
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 0.8s, transform 0.8s; 
     background: #fff;
-    border-radius: var(--radius);
-    margin: 32px auto 0 auto;
-    box-shadow: var(--shadow);
     overflow: hidden;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 .section-wrapper.visible {
     opacity: 1;
@@ -128,7 +127,7 @@ nav a {
 
 .wrapper_left {
     flex: 1;
-    background: linear-gradient(120deg, var(--hover_color) 80%, var(--main_color) 100%);
+    background-color :var(--hover_color) ;
     color: white;
     display: flex;
     flex-direction: column;
@@ -160,10 +159,9 @@ nav a {
     transform: translateY(0);
 }
 .right_img img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 
@@ -176,14 +174,14 @@ nav a {
 }
 .slide{
     padding: 40px 0 40px 0;
-    background: linear-gradient(90deg, var(--hover_color) 60%, var(--main_color) 100%);
+    background-color :var(--background-light) ;
 }
 
 .slide .slide_header {
     text-align: center;
 }
 .slide .slide_header h2 {
-    color: #fff;
+    color: var(--main_color);
     font-family: 'Poppins', Arial, sans-serif;  
     font-weight : 700 ;
     font-size: 2.1em;

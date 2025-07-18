@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images/logo.png" />
   <title>Home Page </title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -28,8 +29,16 @@
   <div class="menu" id="menu">
     <a href="/index.html">Home</a>
     <a href="/services.html">Services</a>
-    <a href="/products.html" class="products">Products</a>
-    <a href="/our_projects.html">Our Projects</a>
+    <div class="nav-item dropdown dropdown_items">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Products
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="/category1.html">Architectural and Finishing Solutions</a></li>
+        <li><a class="dropdown-item" href="/category2.html"> Civil Solutions</a></li>
+        <li><a class="dropdown-item" href="/category3.html">SMEP Solutions</a></li>
+      </ul>
+    </div>    <a href="/our_projects.html">Our Projects</a>
     <a href="/about.html">About Us</a>
     <a href="/contact.html">Contact</a>
   </div>
@@ -42,15 +51,20 @@
 
 <!-- Section -->
 <div class="section-wrapper" id="section">
-  <div class="wrapper_left">
+
+
+  <div class="wrapper_left col-lg-6">
     <h1>Consultancy & Design</h1>
     <h1>Engineering Materials</h1>
     <h1>Modelling</h1>
     <h1>Shop Drawings</h1>
   </div>
-  <div class="right_img" id="right">
+
+  <div class="right_img col-lg-6 " id="right">
     <img src="./images/home8-01.webp" alt="Service Image">
   </div>
+
+ 
 </div>
 
 <!-- Carousel -->
