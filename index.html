@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page </title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="./images/logo.png" alt="logo">
+    </div>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="/index.html">Home</a>
+    <a href="/services.html">Services</a>
+    <a href="/products.html" class="products">Products</a>
+    <a href="/our_projects.html">Our Projects</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+
+ 
+   <a href="/contact.html" class="quote-btn">GET Contact →</a>
+  </div>
+</nav>
+
+
+<!-- Section -->
+<div class="section-wrapper" id="section">
+  <div class="wrapper_left">
+    <h1>Consultancy & Design</h1>
+    <h1>Engineering Materials</h1>
+    <h1>Modelling</h1>
+    <h1>Shop Drawings</h1>
+  </div>
+  <div class="right_img" id="right">
+    <img src="./images/home8-01.webp" alt="Service Image">
+  </div>
+</div>
+
+<!-- Carousel -->
+<div class="slide">
+  <div class="slide_header">
+    <h2>Facade</h2>
+  </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/SLIDE SHOW 1.png" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/SLIDE SHOW 2.jpeg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/SLIDE SHOW 3.png" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/SLIDE SHOW 4.png" class="d-block w-100" alt="Slide 4">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<!-- Scroll Button -->
+<button class="scroll-btn" onclick="scrollToTop()">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<!-- section hero 2 -->
+
+<section class="hero_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header">
+          <h2>A passion for creating spaces</h2>
+          <p>Our comprehensive suite of professional services caters to a diverse clientele, ranging from homeowners to commercial developers.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="hero_2_card">
+          <div class="icon">
+           <span> <i class="fas fa-cogs"></i></span>
+          </div>
+          <div class="info">
+            <h3>Consultancy and Design</h3>
+            <p>Experience in the cladding and stone fixation , in addition to structural calculations</p>
+          </div>
+        </div>
+      </div>     
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="hero_2_card">
+          <div class="icon">
+            <span> <i class="fas fa-tools"></i></span>
+           </div>
+          <div class="info">
+            <h3>Engineering Solutions</h3>
+            <p>We provide several services related to building materials , including Civil , Architectural and Mep soultions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="hero_2_card">
+          <div class="icon">
+            <span> <i class="fas fa-drafting-compass"></i></span>
+           </div>
+          <div class="info">
+            <h3>Revit & Autocad</h3>
+            <p>We provide modeling and shop drawings of concrete and steel structures .</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- products cards  -->
+<section class="hero_cards m-2">
+  <div class="lib-section">
+    <header class="lib-header">
+      <h1>Take a Look 👀</h1>
+    </header>
+    <div class="lib-container">
+      <div class="lib-product-box">
+        <img src="./images/image-75.webp" class="lib-product-img" alt="Pipe Clamps">
+        <a class="lib-product-title" href="#">Pipe Clamps and Hangers</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/f.webp" class="lib-product-img" alt="Fiberglass Cable Tray">
+        <a class="lib-product-title" href="#">Fiberglass Cable Tray</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/Weatherproof.webp" class="lib-product-img" alt="Weatherproof Trunk">
+        <a class="lib-product-title" href="#">Weatherproof Cable Trunk</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/UnderFloor.webp" class="lib-product-img" alt="UnderFloor Trunking">
+        <a class="lib-product-title" href="#">UnderFloor Trunking</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/PVC .webp" class="lib-product-img" alt="PVC Conduits">
+        <a class="lib-product-title" href="#">PVC Electrical Conduits & Accessories</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/C-Channelwebp.webp" class="lib-product-img" alt="C-Channel">
+        <a class="lib-product-title" href="#">C-Channel Strut Systems</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/Cable Trunkings.webp" class="lib-product-img" alt="Cable Trunkings">
+        <a class="lib-product-title" href="#">Cable Trunkings</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+  
+      <div class="lib-product-box">
+        <img src="./images/Basket .webp" class="lib-product-img" alt="Basket Tray">
+        <a class="lib-product-title" href="#">Basket Trays & Accessories</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+      <div class="lib-product-box">
+        <img src="./images/Cable Ladders.webp" class="lib-product-img" alt="Basket Tray">
+        <a class="lib-product-title" href="#">Cable Ladders</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+      <div class="lib-product-box">
+        <img src="./images/Cable Trays & Accessories.webp" class="lib-product-img" alt="Basket Tray">
+        <a class="lib-product-title" href="#">Cable Trays & Accessories</a>
+        <div class="lib-product-meta">— by <a href="#" class="lib_a">MEP Solutions</a></div>
+      </div>
+      
+    
+  
+    </div>
+    <div class="products_btn m-auto">
+      <a href="/products.html" class="btn-products ">Our Products</a>
+    </div>
+  </div>
+  
+</section>
+
+
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="taps">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our_projects.html">Our Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section left mt-4">
+      <a href="index.html"><img src="./images/logo.png" alt="Logo" class="footer-logo"></a>
+      <p class="footer-slogan">
+        <strong>Building A Better Future –<br>
+        Innovative, Sustainable,<br>
+        Reliable.</strong>
+      </p>
+      <div class="footer-social">
+        <a href= "https://www.facebook.com/profile.php?id=61574029981208"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/cems.services?igsh=MTVvbmM2emhkMGhsdg=="><i class="fab fa-instagram"></i></a>
+
+      </div>
+    </div>
+    <div class="footer-section center mt-4">
+      <h3>COMPANY ADDRESS</h3>
+      <p><strong>Mail to:</strong> info@ecom.com</p>
+      <p><strong>Phone:</strong> +961-70494104 </p>
+      <p><strong>Address:</strong> Based in Beirut ,Lebanon</p>
+    </div>
+    <div class="footer-section right mt-4">
+      <h3>Contact With Us</h3>
+      <p>Lets Design Incredible Work Together</p>
+        <a href="contact.html#contact " class="btn_footer">contact</a>
+
+    </div>
+
+  </div>
+  <div class="copy_right ">
+    <p>Designed and managed by CEMS Team</p>
+  </div>
+</footer> 
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  }
+
+  window.onload = function() {
+    const section = document.getElementById('section');
+    const rightImage = document.getElementById('right');
+    section.classList.add('visible');
+    rightImage.classList.add('visible');
+  };
+</script>
+
+</body>
+</html>
