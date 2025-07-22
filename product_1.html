@@ -151,7 +151,36 @@ body {
         padding: 6px 16px;
     }
 }
+.pagination .page-link,
+.pagination .page-link:hover,
+.pagination .page-link:focus,
+.pagination .active .page-link {
+    all: unset;
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 30px;
+    background-color: #ffffff; /* White background */
+    color: #2a5288;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    background-color: #2a5288;
+    color: #fff;
+}
+
+.pagination .active .page-link {
+    background-color: #2a5288;
+    color: #fff;
+    border: none;
+}
 </STyle>
 
 <body>
@@ -241,7 +270,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Raised Access Floor System.webp" alt="Wall Profiles" class="img-fluid">
+                            <img src="./images/product_1/Raised Access Floor System.webp" alt="Raised Access Floor System" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Raised Access Floor System</h3>
@@ -254,7 +283,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Phenolic Partition Systems.webp" alt="Tile Movement Joints" class="img-fluid">
+                            <img src="./images/product_1/Phenolic Partition Systems.webp" alt="Phenolic Partition Systems" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Phenolic Partition Systems</h3>
@@ -267,7 +296,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Pedestal & Grid Raised Floor.webp" alt="Stair Nosing" class="img-fluid">
+                            <img src="./images/product_1/Pedestal & Grid Raised Floor.webp" alt="Pedestal & Grid Raised Floor" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Pedestal & Grid Raised Floor</h3>
@@ -284,7 +313,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Partition Systems.webp" alt="Wall Profiles" class="img-fluid">
+                            <img src="./images/product_1/Partition Systems.webp" alt="Partition Systems" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Partition Systems</h3>
@@ -297,7 +326,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Metal Doors.webp" alt="Tile Movement Joints" class="img-fluid">
+                            <img src="./images/product_1/Metal Doors.webp" alt="Metal Doors" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Metal Doors</h3>
@@ -310,7 +339,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="product-card ">
                         <div class="product-img-container">
-                            <img src="./images/product_1/Metal Ceilings.webp" alt="Stair Nosing" class="img-fluid">
+                            <img src="./images/product_1/Metal Ceilings.webp" alt="Metal Ceilings" class="img-fluid">
                         </div>
                         <div class="product-info p-4">
                             <h3 class="product-title">Metal Ceilings</h3>
@@ -321,6 +350,23 @@ body {
             </div>
         </div>
     </section>
+  <!-- Pagination Section -->
+
+<div class="container_1 my-5">
+    <div class="d-flex justify-content-center">
+      
+        <ul class="pagination">
+          <li class="page-item active">
+            <a class="page-link" href="./product_1.html">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./product_1_2.html">2</a>
+          </li>
+        </ul>
+     
+    </div>
+  </div>
+  
         <!-- footer -->
 
 <footer class="footer">
