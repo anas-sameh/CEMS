@@ -186,30 +186,38 @@ body {
 
 <body>
     <!-- Navbar -->
-<nav>
-    <div class="logo">
-      <div class="logo-icon">
-        <img src="./images/logo.png" alt="logo">
-      </div>
-    </div>
-  
-    <div class="hamburger" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-  
-    <div class="menu" id="menu">
-      <a href="./index.html">Home</a>
-      <a href="./services.html">Services</a>
-      <a href="./products.html" class="products">Products</a>
-      <a href="./our_projects.html">Our Projects</a>
-      <a href="./about.html">About Us</a>
-      <a href="./contact.html">Contact</a>
-    </div>
-  
-   
-     <a href="./contact.html" class="quote-btn">GET Contact →</a>
-    </div>
-  </nav>
+    <nav>
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="./images/logo.png" alt="logo">
+          </div>
+        </div>
+      
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      
+        <div class="menu" id="menu">
+          <a href="/index.html">Home</a>
+          <a href="/services.html">Services</a>
+          <div class="nav-item dropdown dropdown_items">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/product_1.html">Architectural and Finishing Solutions</a></li>
+              <li><a class="dropdown-item" href="/product_2.html"> Civil Solutions</a></li>
+              <li><a class="dropdown-item" href="/product_3.html">MEP Solutions</a></li>
+            </ul>
+          </div>    <a href="/our_projects.html">Our Projects</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      
+       
+         <a href="/contact.html" class="quote-btn">GET Contact →</a>
+        </div>
+      </nav>
   
     <!-- Hero Section -->
     <header class="hero-section">
@@ -373,13 +381,16 @@ body {
     <div class="d-flex justify-content-center">
    
         <ul class="pagination">
-          <li class="page-item ">
-            <a class="page-link" href="./product_1.html">1</a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link" href="./product_1_2.html">2</a>
-          </li>
-        </ul>
+            <li class="page-item ">
+              <a class="page-link" href="./product_1.html">1</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="./product_1_2.html">2</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="./product_1_3.html">3</a>
+            </li>
+          </ul>
     </div>
   </div>
         <!-- footer -->
