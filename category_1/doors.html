@@ -13,7 +13,7 @@
     <style>
         .read_more {
             padding-top: 60px;
-            padding-bottom: 150px ;
+            padding-bottom: 180px ;
             
             
         }
@@ -41,18 +41,35 @@
             color: #000000c0;
             
         }
-       .read_more .read_more_img .img img {
+       .read_more .opened_img  img {
         border: 4px solid #0056b3;
         padding: 8px;    
         transition: transform var(--transition), box-shadow var(--transition);
 
        }
-       .read_more .read_more_img .img:hover img {
+       .read_more .opened_img:hover img {
         transform:  scale(1.03);
        box-shadow: 0 8px 24px rgba(0,0,0,0.13);
         border-color: var(--main_color);
 
        }
+    /*  */
+
+    .slider .opened_img img {
+        width: 400px;
+        height: 350px;
+
+    }
+    .slider .slider_imgs {
+       justify-content: center;
+       
+    }
+    .slider .slider_imgs img {
+        width: 60px;
+        min-height: 60px;
+       border: 2px solid #0057b3ae;
+
+    }
     
     
       </style>
@@ -103,26 +120,37 @@
          <div class="row" >
 
 
-            <div class="col-lg-4 read_more_img">
-                <div class="img">
-                    <img src="../images/product_1/Fire Doors.png" alt="Fire Doors">
+            <div class="slider col-lg-4  m-0">
+                <div class="main-img d-flex justify-content-center">
+                 <div class="opened_img ">
+                     <img class="imgA" id="img_src" src="../images/product_1/Fire Doors.png" alt="Image 1">
+                 </div>
                 </div>
-            </div>
-            
 
-            <div class="col-lg-8 read_more_cards">
-                <p>We provide a wide range of Fire Proof doors available with a variety
-                    of configuration and vision options. The doors are certified for up
-                    to 2 Hrs Fire Rating. These are manufactured to suit staircase,
-                    corridors, service rooms, entrance, etc.
-                </p>
-                <ul>
-                    <li>120 mins Fire Resistance Rating</li>
-                    <li> Frame manufactured from GI Steel</li>
-                    <li>Easy installation</li>
-                    <li>Combination of safety, security and aesthetics</li>
-                </ul>
-            </div>
+                </div>
+
+                <div class="col-lg-8 read_more_cards">
+                    <p>We provide a wide range of Fire Proof doors available with a variety
+                      of configuration and vision options. The doors are certified for up
+                      to 2 Hrs Fire Rating. These are manufactured to suit staircase,
+                      corridors, service rooms, entrance, etc.
+                      </p>
+                      <ul>
+                        <h3>FEATURES</h3>
+                        <li>120 mins Fire Resistance Rating</li>
+                        <li>Frame manufactured from GI Steel</li>
+                        <li>Easy installation</li>
+                        <li>Combination of safety, security and aesthetics</li>
+                      </ul>
+                </div>
+             </div>
+
+
+
+
+
+
+           
 
                 
         </div>
@@ -175,7 +203,31 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
 
+var imgs = Array.from(document.getElementsByClassName("imgA"))
+var mainImg = document.getElementsByClassName("opened_img")
+var mainImgSrc =  document.getElementById('img_src')
+var ImgSrc =  document.getElementById('img_src1')
+var lastClickedImg = null;
+
+for (var i = 0; i < imgs.length; i++){
+  imgs[i].addEventListener("click", function (event){
+
+    var imgSrc = event.target.src
+      mainImgSrc.src = imgSrc
+    
+      if (lastClickedImg) {
+        lastClickedImg.style.transform = 'scale(1)';
+    }
+    event.target.style.transform = 'scale(0.8)';
+    event.target.style.transition = ' transform  0.2s ease-in-out';
+    lastClickedImg = event.target;
+   
+   })
+}
+
+  </script>
 
 </body>
 </html>
