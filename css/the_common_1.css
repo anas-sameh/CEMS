@@ -12,7 +12,7 @@
 }
 .contact_hero {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background-image: url(/images/bg.webp);
     background-position: center center;
     background-repeat: no-repeat;
@@ -37,6 +37,7 @@
     text-align: center;
     padding-top: 80px;
     color: #fff; 
+    
 }
 .contact_hero .info a {
     text-decoration: none;
@@ -58,22 +59,30 @@
     font-weight: 600;
     font-size: 64px;
     margin-bottom: 25px;
-    margin-top: 24px;
+    margin-top: 30vh;
     line-height: 1.2;
     text-transform: capitalize;
   }
 
+
 .contact-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 60px 0 0 60px;
-    background-color : #fff ;
-    position: relative;
-    margin-bottom: 40px;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #fff;
+  margin-bottom: 0;
+  gap: 18px;
+}
+
+.contact-header {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 12px;
+}
   
   .contact-header h3 {
     font-size: 42px;
@@ -203,3 +212,95 @@
   .get-started:hover {
     background:var( --main_color);
   }
+
+/* === About & Services Info Shared Styles === */
+.about_info, .services_info {
+    margin-top: 100px;
+    padding: 40px 0;
+    background: #f8f9fa;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+.about_info h2, .services_info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.about_info span, .services_info span {
+    display: block;
+    font-size: 1.2rem;
+    color: #607d8b;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+.about_info ul, .services_info ul {
+    padding-left: 20px;
+}
+.about_info ul li, .services_info ul li {
+    font-size: 1.08rem;
+    color: #333;
+    margin-bottom: 14px;
+    line-height: 1.7;
+    position: relative;
+}
+.about_info ul li::before, .services_info ul li::before {
+    content: '\2022';
+    color: #1a237e;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.abou_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.abou_logo img {
+    max-width: 90%;
+    max-height: 320px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(26,35,126,0.13);
+    object-fit: cover;
+}
+
+/* === Responsive Media Queries === */
+@media (max-width: 991px) {
+    .about_info, .services_info {
+        margin-top: 60px;
+        padding: 4px 0;
+    }
+    .about_info h2, .services_info h2 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 767px) {
+    .about_info, .services_info {
+        margin-top: 30px;
+        padding: 12px 0;
+    }
+    .about_info h2, .services_info h2 {
+        font-size: 1.5rem;
+    }
+    .contact_hero .info h1 {
+      font-size: 43px;
+    }
+    .abou_logo img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+    .contact-section {
+      padding-left: 5px;
+    }
+    .contact-header {
+      padding-left :15px ;
+    }
+    .contact-header h3 {
+      font-size: 28px;
+    }
+}
+
+

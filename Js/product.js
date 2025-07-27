@@ -60,3 +60,24 @@
           lastClickedImg = event.target;
       });
   }
+
+
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("dropdown-menu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+
+  document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("dropdown-menu");
+    const dropdownToggle = event.target.closest(".dropdown_items");
+
+    if (!dropdownToggle && dropdown) {
+      dropdown.style.display = "none";
+    }
+  });
