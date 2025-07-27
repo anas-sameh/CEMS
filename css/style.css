@@ -943,6 +943,34 @@ border: 2px solid #0057b3ae;
 border-radius: 12px;
 
 }
+@media (max-width: 768px) {
+    .wrapper_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        padding: 20px; 
+    }
 
 
+    .wrapper_left h1 h2 {
+        font-size: 1.9rem;
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
+@media (max-width: 900px) {
+    .wrapper_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        padding: 20px; 
+    }
 
+    .wrapper_left h1 h2 {
+        font-size: 2rem;
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
