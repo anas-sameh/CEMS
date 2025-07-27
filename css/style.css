@@ -329,7 +329,7 @@ html {
   .section-wrapper {
       flex-direction: column;
       min-height: 40vh;
-      margin: 18px 0 0 0;
+
   }
   .wrapper_left, .right_img {
       padding: 24px 12px;
@@ -1241,6 +1241,8 @@ footer .copy_right p {
       padding: 6px 12px;
       display: inline-block;
   }
+  
+ 
 }
 
 
