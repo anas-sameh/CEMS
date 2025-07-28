@@ -53,18 +53,18 @@
   <!-- ====== Projects Section Start ====== -->
   <section class="projects-section">
     <div class="container projects-container">
-      <h2 class="projects-title">structural designs</h2>
+      <h2 class="projects-title">Structural Designs</h2>
       <div class="structural-categories">
         <!-- Facade -->
         <div class="category-box">
           <h3 class="category-title">Facade</h3>
-          <img src="./images/SLIDE SHOW 4.png" alt="Facade Main" class="category-main-img" onclick="openModal('facadeModal')">
+          <a href="./facade.html"><img src="./images/SLIDE SHOW 4.png" alt="Facade Main" class="category-main-img" ></a>
           <div class="img-hint">Click for photos from the ground</div>
         </div>
         <!-- Steel -->
         <div class="category-box">
           <h3 class="category-title">Steel</h3>
-          <img src="./images/Structural_steel_design_principles_2ff742d324.png" alt="Steel Main" class="category-main-img" onclick="openModal('steelModal')">
+         <a href="./steel.html"><img src="./images/Structural_steel_design_principles_2ff742d324.png" alt="Steel Main" class="category-main-img" ></a>
           <div class="img-hint">Click for photos from the ground</div>
         </div>
       </div>
@@ -73,110 +73,16 @@
       <div class="structural-categories">
         <div class="category-box">
           <h3 class="category-title">Modelings & Shop Drawings</h3>
-          <img src="./images/Final-ydtgf--scaled.jpg" alt="Shop Drawing Main" class="category-main-img" onclick="openModal('shopModal')">
+          <a href="./Modelings.html"><img src="./images/Final-ydtgf--scaled.jpg" alt="Shop Drawing Main" class="category-main-img" ></a>
           <div class="img-hint">Click for photos from the ground</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== Modals for Galleries as Sliders ====== -->
-  <!-- Facade Modal Slider -->
-  <div id="facadeModal" class="modal-gallery">
-    <span class="close-modal" onclick="closeModal('facadeModal')">&times;</span>
-    <div class="slider-container">
-      <button class="slider-arrow" onclick="plusSlide('facade', -1)">&#10094;</button>
-      <img id="facadeSliderImg" class="slider-img" src="structural design/facade/0cae0905-0cc1-4400-9771-018683ec5359.jpeg">
-      <button class="slider-arrow" onclick="plusSlide('facade', 1)">&#10095;</button>
-    </div>
-  </div>
-  <!-- Steel Modal Slider -->
-  <div id="steelModal" class="modal-gallery">
-    <span class="close-modal" onclick="closeModal('steelModal')">&times;</span>
-    <div class="slider-container">
-      <button class="slider-arrow" onclick="plusSlide('steel', -1)">&#10094;</button>
-      <img id="steelSliderImg" class="slider-img" src="structural design/steel/106caa04-c041-4b4f-908d-156f72716eaa.jpeg">
-      <button class="slider-arrow" onclick="plusSlide('steel', 1)">&#10095;</button>
-    </div>
-  </div>
-  <!-- Shop Drawings Modal Slider -->
-  <div id="shopModal" class="modal-gallery">
-    <span class="close-modal" onclick="closeModal('shopModal')">&times;</span>
-    <div class="slider-container">
-      <button class="slider-arrow" onclick="plusSlide('shop', -1)">&#10094;</button>
-      <img id="shopSliderImg" class="slider-img" src="./images/shop drawings and fabrications/Screenshot 2025-07-11 160715.png">
-      <button class="slider-arrow" onclick="plusSlide('shop', 1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- ====== Projects Section End ====== -->
+  
 
   <script>
-    // صور كل سلايدر
-    const facadeImgs = [
-      './images/structural design/facade/0cae0905-0cc1-4400-9771-018683ec5359.jpeg',
-      './images/structural design/facade/3db1389f-3216-4f47-86dd-94927a5c2812.jpeg',
-      './images/structural design/facade/4d6698a1-1e89-4fac-852b-f7a64f713602.jpeg',
-      './images/structural design/facade/555256f7-44a8-40e6-9bc7-846f179e8aa8.jpeg',
-    ];
-    let facadeIndex = 0;
-    const steelImgs = [
-      './images/structural design/steel/106caa04-c041-4b4f-908d-156f72716eaa.jpeg',
-      './images/structural design/steel/12c61152-c4da-4c89-bc25-346d99a2effd.jpeg',
-      './images/structural design/steel/15cf75ae-b9c3-471c-9e88-69d528541696.jpeg',
-      './images/structural design/steel/2862ff82-4fa8-4845-9bd0-1ea1aee416b0.jpeg',
-    ];
-    let steelIndex = 0;
-    const shopImgs = [
-      './images/shop drawings and fabrications/Screenshot 2025-07-11 160715.png',
-      './images/shop drawings and fabrications/Screenshot 2025-07-07 135024.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 154054.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 153744.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 131206.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 131127.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 130753.png',
-      './images/shop drawings and fabrications/Screenshot 2025-05-14 130707.png',
-    ];
-    let shopIndex = 0;
-
-    function openModal(id) {
-      document.getElementById(id).classList.add('active');
-      document.body.style.overflow = 'hidden';
-      // Reset to first image
-      if(id==='facadeModal') { facadeIndex=0; showSlide('facade'); }
-      if(id==='steelModal') { steelIndex=0; showSlide('steel'); }
-      if(id==='shopModal') { shopIndex=0; showSlide('shop'); }
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    function plusSlide(type, n) {
-      if(type==='facade') {
-        facadeIndex = (facadeIndex + n + facadeImgs.length) % facadeImgs.length;
-        showSlide('facade');
-      }
-      if(type==='steel') {
-        steelIndex = (steelIndex + n + steelImgs.length) % steelImgs.length;
-        showSlide('steel');
-      }
-      if(type==='shop') {
-        shopIndex = (shopIndex + n + shopImgs.length) % shopImgs.length;
-        showSlide('shop');
-      }
-    }
-    function showSlide(type) {
-      if(type==='facade') {
-        document.getElementById('facadeSliderImg').src = facadeImgs[facadeIndex];
-      }
-      if(type==='steel') {
-        document.getElementById('steelSliderImg').src = steelImgs[steelIndex];
-      }
-      if(type==='shop') {
-        document.getElementById('shopSliderImg').src = shopImgs[shopIndex];
-      }
-    }
-
 
     // //////////////////////////
     function scrollToTop() {

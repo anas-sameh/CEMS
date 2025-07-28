@@ -54,9 +54,7 @@ html {
     transition: transform var(--transition);
   }
   
-  .logo-icon img:hover {
-    transform: scale(1.08) rotate(-2deg);
-  }
+ 
   
   .menu {
     display: flex;
@@ -66,7 +64,7 @@ html {
   }
   
   .menu a {
-    color: var(--text-light);
+    color: var(--text-light) !important;
     font-size: 1.08em;
     padding: 6px 10px;
     border-radius: 6px;
@@ -112,11 +110,13 @@ html {
     padding: 10px 16px;
     margin: 0 10px;
     display: block;
-    color: var(--text-dark);
   }
 
   .dropdown-menu a:hover {
     background: none !important;
+    color: #000000 !important;
+    font-weight: 600;
+    
   }
   
   .quote-btn {
