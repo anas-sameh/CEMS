@@ -1245,10 +1245,76 @@ footer .copy_right p {
  
 }
 
-
-
-
-
 /* ---------------------------------------------FOOTER END--------------------------------------------------- */
 
+@media (max-width: 768px) {
+    .read_more {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+        padding: 20px; /* Optional padding */
+    }
+  
+    .read_more h2 {
+        font-size: 1.5rem; /* Decrease font size for mobile */
+        margin-bottom: 20px; /* Add space below the heading */
+    }
+  
+    .read_more_cards {
+        display: flex;
+        justify-content: center; /* Center the paragraph */
+        align-items: center; /* Center vertically */
+        text-align: center; /* Center text */
+    }
+  
+    .read_more_cards p {
+        font-size: 1rem; /* Adjust font size for better readability */
+        max-width: 600px; /* Limit width for better readability */
+        margin-top: -50px;
+    }
+  
+    .slider {
+        margin: 0 auto; /* Center the slider */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .read_more h2 {
+        font-size: 1.8rem; /* Slightly larger font size for tablets */
+    }
+  }
+  
+  .imgA {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+  }
+  
+  /* Specific styles for the slider images */
+  
+  /* Adjust the main image container */
+  .main-img {
+    display: flex;
+    justify-content: center; /* Center the main image */
+    margin-bottom: 20px; /* Add space below the main image */
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+    .slider {
+        width: 100%; /* Ensure the slider takes full width */
+    }
+  
+    .slider_imgs {
+        flex-direction:row; /* Stack thumbnails vertically on small screens */
+        align-items: center; /* Center thumbnails */
+    }
+  
+    .slider_imgs .img {
+        margin: 10px 0; /* Add vertical spacing between thumbnails */
+    }
+  }
+  
  
