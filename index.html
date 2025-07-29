@@ -340,49 +340,42 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const preloaderKey = "preloaderShownDate";
+    const today = new Date().toISOString().split("T")[0];
+    const lastSeen = localStorage.getItem(preloaderKey);
+
+    if (lastSeen === today) {
+      document.getElementById("preloader").remove();
+      return;
+    }
+
     const phrases = [
       "Consultancy & Designs",
       "Engineering Building Materials",
       "Modellings",
       "Shop Drawings"
     ];
-  
+
     const textContainer = document.getElementById("loader-text");
     const logoDisplay = document.getElementById("logo-display");
     const loadingCircle = document.getElementById("loading-circle");
-  
+
     let currentPhrase = 0;
     let logoText = "";
-  
+
     function showPhrase(index) {
       if (index >= phrases.length) {
-        setTimeout(() => {
-          textContainer.classList.add('fade-out');
-          setTimeout(() => {
-            textContainer.style.display = "none";
-            logoDisplay.classList.add("reveal");
-            loadingCircle.classList.add("visible");
-  
-            // الدخول للموقع بعد 2 ثانية من ظهور الدائرة
-            setTimeout(() => {
-              document.getElementById("preloader").classList.add("hide");
-              setTimeout(() => {
-                document.getElementById("preloader").remove();
-              }, 1000);
-            }, 2000);
-          }, 1000);
-        }, 800);
+        showFinal();
         return;
       }
-  
+
       const phrase = phrases[index];
       const line = document.createElement("div");
-      line.classList.add("loader-line"); // نفس الأنيميشن لكل الجمل
-  
+      line.classList.add("loader-line");
       textContainer.appendChild(line);
-  
+
       let i = 0;
-  
+
       function typeChar() {
         if (i < phrase.length) {
           const span = document.createElement("span");
@@ -394,22 +387,38 @@
           }
           line.appendChild(span);
           i++;
-          setTimeout(typeChar, 80);
+          setTimeout(typeChar, 20); // سرعة مناسبة لكل حرف
         } else {
-          setTimeout(() => showPhrase(index + 1), 400);
+          setTimeout(() => showPhrase(index + 1), 200); // وقت قصير بين الجمل
         }
       }
-  
+
       typeChar();
     }
-  
+
+    function showFinal() {
+      textContainer.classList.add('fade-out');
+      setTimeout(() => {
+        textContainer.style.display = "none";
+        logoDisplay.classList.add("reveal");
+        loadingCircle.classList.add("visible");
+      }, 100);
+    }
+
+    // البداية
+    showPhrase(currentPhrase);
+
+    // نهاية التحميل بعد 4 ثواني
     setTimeout(() => {
-      showPhrase(currentPhrase);
-    }, 1000); // بداية بعد ثانية
+      document.getElementById("preloader").classList.add("hide");
+      localStorage.setItem(preloaderKey, today);
+      setTimeout(() => {
+        document.getElementById("preloader").remove();
+      }, 300); // اختفاء سريع
+    }, 4000);
   });
-  </script>
-  
-  
+</script>
+
   
   
 
