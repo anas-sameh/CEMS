@@ -23,6 +23,142 @@ html {
     scroll-behavior: smooth;
   }
 
+
+/* --------------------------------------------------- preloader START--------------------------------------------------- */
+
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--main_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loader-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.loader-line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.6s forwards;
+}
+
+.loader-line span {
+  display: inline-block;
+  opacity: 0;
+  animation: charFade 0.3s forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+.loader-line span.glow {
+  color: var(--second_color);
+  text-shadow: 0 0 8px var(--second_color);
+  font-weight: bold;
+}
+
+/* logo */
+#logo-display {
+  margin-top: 30px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#logo-display.reveal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* circle */
+#loading-circle {
+  margin-top: 24px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--text-light);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#loading-circle.visible {
+  opacity: 1;
+}
+
+/* fade out */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+/* Animations */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes charFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #loader-text {
+    font-size: 1rem;
+  }
+
+  #logo-display {
+    font-size: 2rem;
+  }
+
+  #loading-circle {
+    width: 32px;
+    height: 32px;
+  }
+}
+/* --------------------------------------------------- preloader END--------------------------------------------------- */
+  
+
 /* --------------------------------------------------- NAVBAR START--------------------------------------------------- */
 
   nav {
