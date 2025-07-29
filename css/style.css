@@ -552,7 +552,7 @@ html {
 }
 @media (max-width: 600px) {
   .lib-section {
-    padding: 0 2px;
+    padding:20px;
   }
   .lib-container {
     grid-template-columns: 1fr;
@@ -564,7 +564,7 @@ html {
     border-radius: 10px;
   }
   .lib-product-img {
-    height: 90px;
+    height: 120px;
     border-radius: 6px;
     margin-bottom: 8px;
   }
