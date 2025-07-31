@@ -204,6 +204,19 @@
     rightImage.classList.add('visible');
   };
 </script>
+ 
+<!-- سكريبت تفعيل lazy loading -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  });
+</script>
+</body>
 
 
 </body>
